@@ -1,70 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### 🔧 `README.md` for Backend (Spring Boot)
 
-In the project directory, you can run:
 
-### `npm start`
+# Task Manager Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the backend of the Task Manager application, built using **Java 17** and **Spring Boot**. It exposes RESTful APIs for authentication and task management.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌟 Features
 
-### `npm test`
+- 👤 **User Management**
+  - Register and login endpoints
+  - JWT-based authentication and authorization
+- 📋 **Task Management APIs**
+  - CRUD operations for tasks
+  - Supports attributes: Title, Description, Due Date, Priority, Status, and Category
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔒 Security Features
 
-### `npm run build`
+- JWT Authentication using Spring Security
+- Passwords securely hashed with BCrypt
+- Role-based access protection (e.g., only authenticated users can manage their tasks)
+- CORS configuration for frontend communication
+- Input validation on DTOs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Java 17
+- Spring Boot
+- Spring Security
+- JWT (JSON Web Tokens)
+- MySQL (or H2 for dev)
+- Maven
+- Hibernate / JPA
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Setup Instructions
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Java 17
+- Maven
+- MySQL Server (if not using H2)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Clone the repo
+git clone <your-repo-url>
+cd task-manager-backend
 
-## Learn More
+# Set up MySQL database
+CREATE DATABASE task_manager;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Update `application.properties` or `application.yml` with your DB credentials
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Build the project
+mvn clean install
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run the app
+mvn spring-boot:run
