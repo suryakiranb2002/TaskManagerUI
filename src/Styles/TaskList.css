@@ -1,0 +1,43 @@
+body {
+    background-color: #f0f4f8;
+  }
+  
+  .tasklist-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tasklist-header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .add-task-button {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table td,
+  .table th {
+    vertical-align: middle;
+  }
+  
+  .fw-semibold {
+    font-weight: 600;
+  }
+  
